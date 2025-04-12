@@ -4,7 +4,6 @@ import "./globals.css";
 import { satoshi } from "./fonts";
 import React from "react";
 import Providers from "./providers";
-import {ColorSchemeScript} from "@mantine/core";
 
 
 export const metadata: Metadata = {

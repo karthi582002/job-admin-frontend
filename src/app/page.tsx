@@ -10,15 +10,25 @@ interface FilterType {
     jobTitle: string;
     jobType: string;
     location: string;
-    // companyName: string;
+    companyName: string;
     salaryMin: number;
     salaryMax: number;
 }
+interface Job {
+    jobTitle: string;
+    jobType: string;
+    location: string;
+    companyName: string;
+    salaryStart: number;
+    salaryEnd: number;
+    createdAt: string | Date; // depending on your data
+}
+
 const Page = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [jobs, setJobs] = useState([]);
+    const [jobs, setJobs] = useState<Job[]>([]);
     const [filters, setFilters] = useState<FilterType>({
-        // companyName: "",
+        companyName: "",
         jobTitle :'',
         jobType: '',
         location: '',
@@ -62,7 +72,6 @@ const Page = () => {
 
     // Function to close the modal
     const handleCloseModal = () => setIsModalOpen(false);
-    // @ts-ignore
 
     const filteredJobs = useMemo(() => {
         const filtered = jobs.filter(job => {
