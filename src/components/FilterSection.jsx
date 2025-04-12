@@ -17,7 +17,7 @@ export default function FilterSection({ filters, setFilters }) {
         <Box className="w-full lg:h-[60px]  mb-[26px]  px-[58px] py-2 flex flex-col  lg:flex-row justify-between " spacing="md" position="apart" wrap="wrap">
             {/* Search */}
             <Box spacing="sm" className="flex flex-row lg:justify-between lg:ml-0 ml-[27px] relative">
-                <Image src="/icons/search.svg" alt="search-icon" width={18} height={18} style={{
+                <Image src="/Icons/search.svg" alt="search-icon" width={18} height={18} style={{
                     position:'absolute',
                     top:8,
                     left:-15,
@@ -52,7 +52,7 @@ export default function FilterSection({ filters, setFilters }) {
 
             {/* Location */}
             <Box spacing="sm" className="flex flex-row" ml={rem(27)} position="relative">
-                <Image src="/icons/location.svg" alt="location-icon" width={18} height={18} />
+                <Image src="/Icons/location.svg" alt="location-icon" width={18} height={18} />
                 <NativeSelect
                     onChange={(e) => setFilters(prev => ({ ...prev, location: e.target.value }))}
                     placeholder="Preferred Location"
@@ -60,7 +60,7 @@ export default function FilterSection({ filters, setFilters }) {
                     rightSection={
                         <Image
                             style={{position: 'absolute', right: '36px', top: '24px'}}
-                            src="/icons/down.svg"
+                            src="/Icons/down.svg"
                             alt="dropdown-icon"
                             width={14}
                             height={8}
@@ -115,7 +115,7 @@ export default function FilterSection({ filters, setFilters }) {
 
             {/* Job Type */}
             <Box spacing="sm" align="center" className="flex flex-row" ml={rem(27)} position="relative">
-                <Image src="/icons/job.svg" alt="job-icon" width={20} height={20}/>
+                <Image src="/Icons/job.svg" alt="job-icon" width={20} height={20}/>
                 <NativeSelect
                     onChange={(e) => setFilters(prev => ({ ...prev, jobType: e.target.value }))}
                     placeholder="Job Type"
@@ -123,7 +123,7 @@ export default function FilterSection({ filters, setFilters }) {
                     rightSection={
                         <Image
                             style={{ position: 'absolute', right: '36px', top: '24px' }}
-                            src="/icons/down.svg"
+                            src="/Icons/down.svg"
                             alt="dropdown-icon"
                             width={14}
                             height={8}

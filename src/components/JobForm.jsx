@@ -196,7 +196,7 @@ const JobForm = ({ isOpen, onClose }) => {
                                     rightSection={
                                         <Image
                                             style={{ position: 'absolute', right: '20px', top: '24px' }}
-                                            src="/icons/down.svg"
+                                            src="/Icons/down.svg"
                                             alt="dropdown-icon"
                                             width={14}
                                             height={8}
@@ -215,6 +215,15 @@ const JobForm = ({ isOpen, onClose }) => {
                                 <Select
                                     label="Job Type"
                                     placeholder="Select Job Type"
+                                    rightSection={
+                                        <Image
+                                            style={{ position: 'absolute', right: '20px', top: '24px' }}
+                                            src="/Icons/down.svg"
+                                            alt="dropdown-icon"
+                                            width={14}
+                                            height={8}
+                                        />
+                                    }
                                     data={[
                                         { label: '', value: 'Job Type', disabled: true },
                                         { label: 'FullTime', value: 'FULLTIME' },
@@ -225,6 +234,7 @@ const JobForm = ({ isOpen, onClose }) => {
                                     }
                                     error={errors.type?.message}
                                     styles={inputBase}
+
                                     {...field}
                                 />
                             )}
@@ -261,7 +271,7 @@ const JobForm = ({ isOpen, onClose }) => {
                                 leftSection={
                                 <Image
                                     style={{ position: 'absolute', right: '5px', top: '19px' }}
-                                    src="/icons/upDown.svg"
+                                    src="/Icons/upDown.svg"
                                     alt="dropdown-icon"
                                     width={14}
                                     height={8}
@@ -286,7 +296,7 @@ const JobForm = ({ isOpen, onClose }) => {
                                 leftSection={
                                     <Image
                                         style={{ position: 'absolute', right: '5px', top: '19px' }}
-                                        src="/icons/upDown.svg"
+                                        src="/Icons/upDown.svg"
                                         alt="dropdown-icon"
                                         width={14}
                                         height={8}
@@ -398,7 +408,7 @@ const JobForm = ({ isOpen, onClose }) => {
                                 }}
                                 rightSection={<Image
                                     style={{ position: 'absolute', right: '-90px', top: '18px' }}
-                                    src="/icons/dates.svg"
+                                    src="/Icons/dates.svg"
                                     alt="dropdown-icon"
                                     width={14}
                                     height={8}
@@ -487,7 +497,7 @@ const JobForm = ({ isOpen, onClose }) => {
                     >
                         Save Draft
                         <Image
-                            src={'/icons/bottom.svg'}
+                            src={'/Icons/bottom.svg'}
                             alt={'down-arrow'}
                             height={10}
                             width={9}
@@ -503,7 +513,7 @@ const JobForm = ({ isOpen, onClose }) => {
                             width: '207px',
                             height: '59px',
                             display: 'flex',
-                            padding: '12px 58px',
+                            padding: '12px 50px',
                             justifyContent: 'center',
                             alignItems: 'center',
                             fontSize: '20px',
@@ -512,9 +522,9 @@ const JobForm = ({ isOpen, onClose }) => {
                         }}
                     >
                         Publish
-                        <Image src={'/icons/right.svg'} alt={'down-arrow'} height={16} width={16}
+                        <Image src={'/Icons/right.svg'} alt={'down-arrow'} height={16} width={16}
                             style={{
-                                marginLeft:'10px',
+                                marginLeft:'5px',
                                 marginTop:'2px',
                             }}
                         />

@@ -18,13 +18,13 @@ const JobCards = ({job,index}) => {
     };
     const jobDetails = [
         {
-            icon: "/icons/experience.svg",
+            icon: "/Icons/experience.svg",
             label: experienceMap[job.jobType] || "N/A",
             width: 17.1,
             height: 13.5,
         },
         {
-            icon: "/icons/mode.svg",
+            icon: "/Icons/mode.svg",
             label: `${
                 job.jobType === "FULLTIME"
                     ? "Onsite"
@@ -37,7 +37,7 @@ const JobCards = ({job,index}) => {
             height: 14.682,
         },
         {
-            icon: "/icons/stack.svg",
+            icon: "/Icons/stack.svg",
             label: `${(job.salaryEnd * 12 / 100000).toFixed(0)} LPA`,
             width: 16.364,
             height: 18.182,
