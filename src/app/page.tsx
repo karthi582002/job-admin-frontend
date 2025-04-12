@@ -52,6 +52,8 @@ const Page = () => {
                 setLoading(false)
             } catch (error) {
                 console.error('Error fetching jobs:', error);
+            }finally {
+                setLoading(false)
             }
         };
         fetchJobs();
@@ -113,8 +115,11 @@ const Page = () => {
             {/*    className="px-[64px] py-[46px] mt-[-10px] h-screen grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[16px] z-0 space-y-2 bg-[#FFFFFF]"*/}
             {/*>*/}
             <Box
-                className="px-[64px] py-[46px] mt-[-10px] h-auto flex flex-row justify-between  gap-[16px] z-0 flex-wrap space-y-6 bg-[#FBFBFF]"
+                    className={`flex flex-wrap gap-[16px] space-y-6 bg-[#FBFBFF] 
+      ${filteredJobs.length <= 2 ? 'justify-center' : 'justify-between'} 
+      px-[32px] md:px-[64px] py-[46px] mt-[-10px]`}
             >
+
                 {
                     filteredJobs.length !== 0 ?
                     filteredJobs.map((item, index) => (
@@ -126,7 +131,6 @@ const Page = () => {
             <Box>
                 <JobForm isOpen={isModalOpen} onClose={handleCloseModal}/>
             </Box>
-
         </>
     )
 }
