@@ -54,7 +54,7 @@ const JobForm = ({ isOpen, onClose }) => {
 
         try {
             const response = await axios.post(
-                'https://web-production-3a402.up.railway.app/jobs',
+                'https://api.karthikeyanm.tech/jobs',
                 payload,
                 {
                     headers: {

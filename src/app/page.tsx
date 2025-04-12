@@ -42,7 +42,7 @@ const Page = () => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const { data } = await axios.get('https://web-production-3a402.up.railway.app/jobs', {
+                const { data } = await axios.get('https://api.karthikeyanm.tech/jobs', {
                     headers: {
                         'x-api-key': 'K.582002', // if using env
                     }
